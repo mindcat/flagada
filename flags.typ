@@ -1991,6 +1991,24 @@
     )
   )
 }
+// esperanto 2:3
+#let flag-esperanto(height:.65em) = {
+  box(
+    rect(height:height, width: 3/2*height,fill:rgb(0,153,0))
+    +place(top,
+      rect(
+        height:height/2,
+        width: height/2,
+       fill:rgb(255,255,255) 
+      )
+      + place(
+        dy:(-1/2+1/30)*height,
+        dx:1/3*6/4*height/5,
+        text(rgb(0,153,0), size:1/2*height,[\u{2605}])
+      )
+    )
+  )
+}
 // et 1:2
 #let flag-et(height:.65em) = {
   box(
@@ -8232,6 +8250,7 @@
     SM: flag-sm(height:height),
     SN: flag-sn(height:height),
     SO: flag-so(height:height),
+    SP: flag-esperanto(height:height),
     SR: flag-sr(height:height),
     SS: flag-ss(height:height),
     ST: flag-st(height:height),
