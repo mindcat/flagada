@@ -1995,7 +1995,7 @@
 #let flag-esperanto(height:.65em) = {
   box(
     rect(height:height, width: 3/2*height,fill:rgb(0,153,0))
-    +place(top,
+    +place(top, dx: -0.005*height, dy: -0.005*height,
       rect(
         height:height/2,
         width: height/2,
@@ -7873,6 +7873,29 @@
 #let flag-yt(height:.65em) = {
   flag-fr(height: height)
 }
+// yugoslavia 1:2
+#let flag-yu(height:.65em) = {
+  box(
+    rect(
+      height: height,
+      width:2*height,
+      fill:gradient.linear(
+        dir:ttb,
+        rgb(0,56,147),white,rgb(222,0,0)
+        ).sharp(3)
+    )
+    + place(
+        dy:-(1+0.085)*height,
+        dx:(1/2+1/7-0.03)*height,
+        text(rgb(252,209,21), size:(1.3)*height,[\u{2605}])
+    )
+    + place(
+        dy:-height,
+        dx:(1/2+1.01/5-0.03)*height,
+        text(rgb(222,0,0), size:(1.1)*height,[\u{2605}])
+    )
+  )
+}
 // za 
 #let flag-za(height:.65em) = {
   box(
@@ -8291,6 +8314,7 @@
     WS: flag-ws(height:height),
     YE: flag-ye(height:height),
     YT: flag-yt(height:height),
+    YU: flag-yu(height:height),
     ZA: flag-za(height:height),
     ZM: flag-zm(height:height),
     ZW: flag-zw(height:height),
